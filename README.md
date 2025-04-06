@@ -2,15 +2,11 @@
 
 This project investigates the vulnerability of Long Short-Term Memory (LSTM) models to spurious correlations in the context of fake news classification. Through systematic manipulation of the dataset, we reveal how biases in text data can significantly inflate model performance, ultimately misleading the evaluation of deep learning models in NLP tasks.
 
----
-
 ## Background
 
 Fake news detection is a challenging natural language processing (NLP) task that relies on understanding subtle linguistic cues. However, models like LSTM can inadvertently exploit superficial features or artifacts in the data (e.g., stylistic differences between real and fake news) that do not generalise well to real-world scenarios.
 
 This project tests the hypothesis that LSTMs are prone to such spurious correlations and evaluates their performance under more controlled, bias-mitigated conditions.
-
----
 
 ## Methodology
 
@@ -30,15 +26,11 @@ To assess LSTM vulnerability to spurious correlations in fake news classificatio
   - Performance compared using accuracy and F1-score on clean vs manipulated datasets.
   - Grad-CAM was used to interpret model behaviour and verify reliance on spurious features.
 
----
-
 ## Results
 
 The LSTM model showed a significant performance drop when tested on the manipulated dataset, indicating that it had learned to rely on the artificial spurious tokens introduced during training.
 
 Grad-CAM visualizations further confirmed that these tokens contributed heavily to the model’s decision-making, despite their lack of semantic meaning.
-
----
 
 ## Technologies
 
